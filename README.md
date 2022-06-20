@@ -1,2 +1,1 @@
-# Valid-Anagram
-Hash Table String Sorting
+https://leetcode.com/problems/valid-anagram
