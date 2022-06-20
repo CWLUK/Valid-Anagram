@@ -1,0 +1,25 @@
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+        if (s.size() != t.size()) return false;
+        
+        vector<int> v1(26, 0);
+        vector<int> v2(26, 0);
+        
+        for (int i=0; i<s.size(); i++){
+            v1[s[i]-97]++;
+            v2[t[i]-97]++;
+        }
+        
+        return v1 == v2;
+/*
+        if (s.size() != t.size()) return false;
+        for (int i=0; i<s.size(); i++){
+            int found = t.find(s[i]);
+            if (t.find(s[i]) == string::npos) return false;
+            t.erase(t.begin() + found);
+        }
+        return true;
+*/
+    }
+};
